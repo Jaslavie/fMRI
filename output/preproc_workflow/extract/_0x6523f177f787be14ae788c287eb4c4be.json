@@ -1,0 +1,23 @@
+[
+    [
+        "function_str",
+        "def extract_roi(in_file, t_min=4):\n    from nilearn import image \n    from nilearn.image import index_img  # Added this import inside function\n    img = image.load_img(in_file)\n    roi_img = index_img(img, slice(t_min, None))\n    return roi_img\n"
+    ],
+    [
+        "in_file",
+        [
+            "/Users/jaslavie/fMRI/output/preproc_workflow/gunzip_func/sub-07_task-flanker_run-1_bold.nii",
+            "5567660beee607c3e3887d164ea1291e"
+        ]
+    ],
+    [
+        "t_min",
+        4
+    ],
+    [
+        "needed_outputs",
+        [
+            "roi_img"
+        ]
+    ]
+]

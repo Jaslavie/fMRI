@@ -1,0 +1,19 @@
+[
+    [
+        "in_file",
+        [
+            "/Users/jaslavie/fMRI/data/ds102_R2.0.0/sub-07/func/sub-07_task-flanker_run-1_bold.nii.gz",
+            "d45a46375747091954af64495370816f"
+        ]
+    ],
+    [
+        "mode",
+        "decompress"
+    ],
+    [
+        "needed_outputs",
+        [
+            "out_file"
+        ]
+    ]
+]

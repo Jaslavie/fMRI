@@ -1,0 +1,46 @@
+{
+    "groups": [
+        {
+            "name": "Group_00001",
+            "procs": [
+                0,
+                1,
+                2
+            ],
+            "total": 3
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1,
+            "value": 1
+        },
+        {
+            "source": 1,
+            "target": 2,
+            "value": 1
+        }
+    ],
+    "maxN": 3,
+    "nodes": [
+        {
+            "group": 1,
+            "name": "0_gunzip_func",
+            "report": "/Users/jaslavie/fMRI/output/preproc_workflow/gunzip_func/_report/report.rst",
+            "result": "/Users/jaslavie/fMRI/output/preproc_workflow/gunzip_func/result_gunzip_func.pklz"
+        },
+        {
+            "group": 1,
+            "name": "1_extract",
+            "report": "/Users/jaslavie/fMRI/output/preproc_workflow/extract/_report/report.rst",
+            "result": "/Users/jaslavie/fMRI/output/preproc_workflow/extract/result_extract.pklz"
+        },
+        {
+            "group": 1,
+            "name": "2_slicetime_correction",
+            "report": "/Users/jaslavie/fMRI/output/preproc_workflow/slicetime_correction/_report/report.rst",
+            "result": "/Users/jaslavie/fMRI/output/preproc_workflow/slicetime_correction/result_slicetime_correction.pklz"
+        }
+    ]
+}

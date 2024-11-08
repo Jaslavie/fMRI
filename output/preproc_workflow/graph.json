@@ -1,0 +1,24 @@
+[
+    {
+        "group": 1,
+        "imports": [],
+        "name": "0_gunzip_func",
+        "size": 1
+    },
+    {
+        "group": 1,
+        "imports": [
+            "0_gunzip_func"
+        ],
+        "name": "1_extract",
+        "size": 1
+    },
+    {
+        "group": 1,
+        "imports": [
+            "1_extract"
+        ],
+        "name": "2_slicetime_correction",
+        "size": 1
+    }
+]
