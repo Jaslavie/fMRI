@@ -1,0 +1,21 @@
+[
+    [
+        "in_file",
+        [
+            "/Users/jaslavie/fMRI/output/preproc_workflow/extract/roi_extracted.nii",
+            "186b9e3b9214a5faa25add74035a9019"
+        ]
+    ],
+    [
+        "interleaved",
+        true
+    ],
+    [
+        "output_type",
+        "NIFTI"
+    ],
+    [
+        "slice_direction",
+        3
+    ]
+]

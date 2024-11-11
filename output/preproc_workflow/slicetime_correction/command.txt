@@ -1,0 +1,1 @@
+slicetimer --in=/Users/jaslavie/fMRI/output/preproc_workflow/extract/roi_extracted.nii --odd --out=/Users/jaslavie/fMRI/output/preproc_workflow/slicetime_correction/roi_extracted_st.nii --direction=3

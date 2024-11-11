@@ -13,9 +13,15 @@ Original Inputs
 * function_str : def extract_roi(in_file, t_min=4):
     from nilearn import image 
     from nilearn.image import index_img 
+    import os
+
     img = image.load_img(in_file)
     roi_img = index_img(img, slice(t_min, None))
-    return roi_img # return the extracted ROI img
+
+    # save the extracted ROI to a temp file and return the path
+    output_path = os.path.abspath('roi_extracted.nii')
+    roi_img.to_filename(output_path)
+    return output_path
 
 * in_file : /Users/jaslavie/fMRI/output/preproc_workflow/gunzip_func/sub-07_task-flanker_run-1_bold.nii
 * t_min : 4
@@ -28,9 +34,15 @@ Execution Inputs
 * function_str : def extract_roi(in_file, t_min=4):
     from nilearn import image 
     from nilearn.image import index_img 
+    import os
+
     img = image.load_img(in_file)
     roi_img = index_img(img, slice(t_min, None))
-    return roi_img # return the extracted ROI img
+
+    # save the extracted ROI to a temp file and return the path
+    output_path = os.path.abspath('roi_extracted.nii')
+    roi_img.to_filename(output_path)
+    return output_path
 
 * in_file : /Users/jaslavie/fMRI/output/preproc_workflow/gunzip_func/sub-07_task-flanker_run-1_bold.nii
 * t_min : 4
@@ -40,68 +52,15 @@ Execution Outputs
 -----------------
 
 
-* roi_img : 
-<class 'nibabel.nifti1.Nifti1Image'>
-data shape (64, 64, 40, 142)
-affine:
-[[   3.            0.            0.          -94.5       ]
- [   0.            3.            0.         -100.28313446]
- [   0.            0.            4.          -93.1807251 ]
- [   0.            0.            0.            1.        ]]
-metadata:
-<class 'nibabel.nifti1.Nifti1Header'> object, endian='<'
-sizeof_hdr      : 348
-data_type       : b''
-db_name         : b''
-extents         : 0
-session_error   : 0
-regular         : b'r'
-dim_info        : 0
-dim             : [  4  64  64  40 142   1   1   1]
-intent_p1       : 0.0
-intent_p2       : 0.0
-intent_p3       : 0.0
-intent_code     : none
-datatype        : int16
-bitpix          : 16
-slice_start     : 0
-pixdim          : [1. 3. 3. 4. 2. 1. 1. 1.]
-vox_offset      : 0.0
-scl_slope       : nan
-scl_inter       : nan
-slice_end       : 0
-slice_code      : unknown
-xyzt_units      : 10
-cal_max         : 1688.0
-cal_min         : 0.0
-slice_duration  : 0.0
-toffset         : 0.0
-glmax           : 0
-glmin           : 0
-descrip         : b'FSL4.0'
-aux_file        : b''
-qform_code      : scanner
-sform_code      : scanner
-quatern_b       : 0.0
-quatern_c       : 0.0
-quatern_d       : 0.0
-qoffset_x       : -94.5
-qoffset_y       : -100.283134
-qoffset_z       : -93.180725
-srow_x          : [  3.    0.    0.  -94.5]
-srow_y          : [   0.          3.          0.       -100.283134]
-srow_z          : [  0.         0.         4.       -93.180725]
-intent_name     : b''
-magic           : b'n+1'
-
+* roi_img : /Users/jaslavie/fMRI/output/preproc_workflow/extract/roi_extracted.nii
 
 
 Runtime info
 ------------
 
 
-* duration : 0.025869
-* hostname : dhcp-v086-017.mobile.uci.edu
+* duration : 0.287917
+* hostname : Jasmines-MacBook-Air.local
 * prev_wd : /Users/jaslavie/fMRI
 * working_dir : /Users/jaslavie/fMRI/output/preproc_workflow/extract
 
@@ -110,6 +69,7 @@ Environment
 ~~~~~~~~~~~
 
 
+* APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL : 1
 * CLICOLOR : 1
 * CLICOLOR_FORCE : 1
 * COMMAND_MODE : unix2003
@@ -124,7 +84,12 @@ Environment
 * ELECTRON_RUN_AS_NODE : 1
 * FORCE_COLOR : 1
 * FSLDIR : /usr/local/fsl
+* FSLMULTIFILEQUIT : TRUE
 * FSLOUTPUTTYPE : NIFTI
+* FSLTCLSH : /Users/jaslavie/fsl/bin/fsltclsh
+* FSLWISH : /Users/jaslavie/fsl/bin/fslwish
+* FSL_LOAD_NIFTI_EXTENSIONS : 0
+* FSL_SKIP_GLOBAL : 0
 * GIT_PAGER : cat
 * HOME : /Users/jaslavie
 * HOMEBREW_CELLAR : /opt/homebrew/Cellar
@@ -147,7 +112,7 @@ Environment
 * NVM_INC : /Users/jaslavie/.nvm/versions/node/v20.11.0/include/node
 * ORIGINAL_XDG_CURRENT_DESKTOP : undefined
 * PAGER : cat
-* PATH : /usr/local/fsl/bin:/usr/local/fsl/bin:/usr/local/fsl/bin:/usr/local/fsl/bin:/usr/local/fsl/bin:/usr/local/fsl/bin:/usr/local/fsl/bin:/usr/local/fsl/bin:/Users/jaslavie/fMRI/venv/bin:/Users/jaslavie/.cargo/bin:/Users/jaslavie/.rye/shims:/opt/miniconda3/bin:/opt/miniconda3/condabin:/Users/jaslavie/.nvm/versions/node/v20.11.0/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Applications/quarto/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+* PATH : /usr/local/fsl/bin:/usr/local/fsl/bin:/usr/local/fsl/bin:/usr/local/fsl/bin:/Users/jaslavie/fMRI/venv/bin:/Users/jaslavie/.cargo/bin:/Users/jaslavie/.rye/shims:/opt/miniconda3/bin:/opt/miniconda3/condabin:/Users/jaslavie/.nvm/versions/node/v20.11.0/bin:/Users/jaslavie/fsl/share/fsl/bin:/Users/jaslavie/fsl/share/fsl/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Applications/quarto/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
 * PS1 : (venv) 
 * PWD : /
 * PYDEVD_IPYTHON_COMPATIBLE_DEBUGGING : 1
@@ -162,7 +127,7 @@ Environment
 * TERM : xterm-color
 * TERM_PROGRAM : Apple_Terminal
 * TERM_PROGRAM_VERSION : 447
-* TERM_SESSION_ID : AB2853D1-A204-46B6-B2FA-7BC1E754198C
+* TERM_SESSION_ID : AE154C3B-5599-4C0C-9ECA-D287E2BD12A1
 * TMPDIR : /var/folders/t4/kq2w5sp97l11x3ky8lqjsf800000gn/T/
 * USER : jaslavie
 * VIRTUAL_ENV : /Users/jaslavie/fMRI/venv
@@ -175,7 +140,6 @@ Environment
 * VSCODE_DOTNET_INSTALL_TOOL_ORIGINAL_HOME : /Users/jaslavie
 * VSCODE_HANDLES_UNCAUGHT_ERRORS : true
 * VSCODE_IPC_HOOK : /Users/jaslavie/Library/Application Support/Cursor/0.42-main.sock
-* VSCODE_L10N_BUNDLE_LOCATION : 
 * VSCODE_NLS_CONFIG : {"userLocale":"en-us","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/Applications/Cursor.app/Contents/Resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}
 * VSCODE_PID : 81250
 * XPC_FLAGS : 0x0
