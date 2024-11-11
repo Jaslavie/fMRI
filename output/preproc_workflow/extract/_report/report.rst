@@ -12,10 +12,10 @@ Original Inputs
 
 * function_str : def extract_roi(in_file, t_min=4):
     from nilearn import image 
-    from nilearn.image import index_img  # Added this import inside function
+    from nilearn.image import index_img 
     img = image.load_img(in_file)
     roi_img = index_img(img, slice(t_min, None))
-    return roi_img
+    return roi_img # return the extracted ROI img
 
 * in_file : /Users/jaslavie/fMRI/output/preproc_workflow/gunzip_func/sub-07_task-flanker_run-1_bold.nii
 * t_min : 4
@@ -27,10 +27,10 @@ Execution Inputs
 
 * function_str : def extract_roi(in_file, t_min=4):
     from nilearn import image 
-    from nilearn.image import index_img  # Added this import inside function
+    from nilearn.image import index_img 
     img = image.load_img(in_file)
     roi_img = index_img(img, slice(t_min, None))
-    return roi_img
+    return roi_img # return the extracted ROI img
 
 * in_file : /Users/jaslavie/fMRI/output/preproc_workflow/gunzip_func/sub-07_task-flanker_run-1_bold.nii
 * t_min : 4
@@ -100,7 +100,7 @@ Runtime info
 ------------
 
 
-* duration : 0.240555
+* duration : 0.025869
 * hostname : dhcp-v086-017.mobile.uci.edu
 * prev_wd : /Users/jaslavie/fMRI
 * working_dir : /Users/jaslavie/fMRI/output/preproc_workflow/extract
