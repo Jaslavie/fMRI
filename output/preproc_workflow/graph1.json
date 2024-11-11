@@ -39,8 +39,8 @@
         {
             "group": 1,
             "name": "2_slicetime_correction",
-            "report": "/Users/jaslavie/fMRI/output/preproc_workflow/slicetime_correction/_report/report.rst",
-            "result": "/Users/jaslavie/fMRI/output/preproc_workflow/slicetime_correction/result_slicetime_correction.pklz"
+            "report": "/private/var/folders/t4/kq2w5sp97l11x3ky8lqjsf800000gn/T/tmprglr8qez/preproc_workflow/slicetime_correction/_report/report.rst",
+            "result": "/private/var/folders/t4/kq2w5sp97l11x3ky8lqjsf800000gn/T/tmprglr8qez/preproc_workflow/slicetime_correction/result_slicetime_correction.pklz"
         }
     ]
 }
